@@ -1,6 +1,9 @@
 
 package principal;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Maickon Brenner
@@ -124,6 +127,11 @@ public class TelaLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        JFrame frame = new JFrame();
+        JOptionPane.showMessageDialog(frame,
+        "O sistema será encerrado!", 
+        "MeuPDV",JOptionPane.INFORMATION_MESSAGE);
+        
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
