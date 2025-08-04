@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icon.png">
+  <script src="js/CadastrarProdutos.js"></script>
+  <title>Sistema MeuPDV | Route 85</title>
+</head>
+<body>
+  <header>
+    <img src="assets/icon.png" alt="Logo Route 85" class="logo">
+    <h1>Cadastrar Produtos</h1>
+  </header>
+
+  <main>
+    <div class="form-box">
+      <form onsubmit="cadastrarProduto(event)">
+        <table class="tabela">
+          <tr>
+            <label>Cadastrar Produto:</label>
+            <td>Nome do Produto:</td>
+            <td><input type="text" name="nome" id="nome"></td>
+          </tr>
+          <tr>
+            <td>Descrição do Produto:</td>
+            <td><input type="text" name="descricao" id="descricao"></td>
+          </tr>
+          <tr>
+            <td>Preço do Produto:</td>
+            <td><input type="text" name="preco" id="preco"></td>
+          </tr>
+          <tr>
+            <td>Categoria do Produto:</td>
+            <td>
+              <select name="categoria" id="categoria">
+                <option value="item0">Escolha um item</option>
+                <option value="Café da Manhã">Café da Manhã</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Jantar">Jantar</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="centralizar-botao" colspan="2">
+              <input type="submit" value="Cadastrar" class="botao">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>MeuPDV &copy; <script>document.write(new Date().getFullYear());</script> | Versão 1.0.0</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  php:
+    image: php:8.2-apache
+    container_name: php_meupdv
+    volumes:
+      - ./entrypoint.sh:/usr/local/bin/entrypoint.sh
+      - ./public:/var/www/html
+      - ./data:/var/www/html/data
+
+    ports:
+      - "8080:80"
+    entrypoint: /usr/local/bin/entrypoint.sh
+    restart: unless-stopped
+
+  caddy:
+    image: caddy
+    container_name: caddy_meupdv
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./public:/srv
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped

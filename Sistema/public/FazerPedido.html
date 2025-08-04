@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icon.png">
+  <script src="js/FazerPedido.js" defer></script>
+  <title>Sistema MeuPDV | Route 85</title>
+</head>
+<body>
+  <header>
+    <img src="assets/icon.png" alt="Logo Route 85" class="logo">
+    <h1>Sistema de Pedidos</h1>
+  </header>
+
+  <main>
+    <div class="form-box">
+      <form onsubmit="realizarPedido(event)">
+        <table class="tabela">
+          <tr>
+            <label>Fazer Pedido:</label>
+            <td>Categoria do Produto:</td>
+            <td>
+              <select name="categoria" id="categoria">
+                <option value="">Escolha uma categoria</option>
+                <option value="Café da Manhã">Café da Manhã</option>
+                <option value="Bebidas">Bebidas</option>
+                <option value="Jantar">Jantar</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Produto:</td>
+            <td>
+              <select name="produto" id="produto">
+                <option value="">Selecione uma categoria primeiro</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Mesa:</td>
+            <td>
+              <select name="mesa" id="mesa">
+                <option value="">Escolha a mesa</option>
+                <option value="1">Mesa 1</option>
+                <option value="2">Mesa 2</option>
+                <option value="3">Mesa 3</option>
+                <option value="4">Mesa 4</option>
+                <option value="5">Mesa 5</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr id="quantidade-row" style="display:none;">
+            <td>Quantidade:</td>
+            <td>
+              <input type="number" name="quantidade" id="quantidade" min="1" value="1" required>
+              <button class="botao"type="button" onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="2">
+              <h3>Itens do pedido:</h3>
+              <ul id="lista-carrinho"></ul>
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="centralizar-botao" colspan="2">
+              <input type="submit" value="Fazer Pedido" class="botao">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>MeuPDV &copy; <script>document.write(new Date().getFullYear());</script> | Versão 1.0.0</p>
+  </footer>
+</body>
+</html>

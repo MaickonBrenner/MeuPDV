@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/icon.png">
+    
+    <title>Central de Pedidos | Route 85</title>
+</head>
+<body>
+
+    <header>
+        <img src="assets/icon.png" alt="Logo Route 85" class="logo"><br>
+        <h1>Central de Pedidos</h1>
+    </header>
+
+    <main>
+        <div class="form-box2">
+            
+            <section class="tabela">
+                <label for="search">Buscar Pedido:</label>
+                <input type="text" id="search" placeholder="Digite o número da mesa">
+                <button class="botao" onclick="buscarPedido()">Buscar</button>
+                <button class="botao" style="background-color: rgb(177, 0, 0);" onclick="limparPedidos()">Limpar Pedidos</button>
+            </section>
+
+            <section id="lista-pedidos">
+                <!-- Lista de pedidos será carregada aqui -->
+            </section>
+            
+        </div>
+    </main>
+    <script src="js/CentralPedidos.js" defer></script>
+</body>
+</html>

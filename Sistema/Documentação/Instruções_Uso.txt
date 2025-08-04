@@ -1,0 +1,49 @@
+# Instruções de Uso 
+
+## Instalação de Dependências
+1 - Instalar docker
+2 - Instalar o docker compose
+
+## Execução (IMPORTANTE)
+1 - Ir na raiz do projeto :
+- sudo usermod -aG docker $USER (Para dá permissão ao docker)
+
+2 - Crie os seguintes arquivos:
+touch entrypoint.sh
+chmod +x entrypoint.sh
+touch data/meupdv.db
+
+3 - Criação da Base de Dados:
+## Antes de inicializar o sistema, rode o seguinte comando na pasta api:
+- php init.php
+
+4 - Fornecer permissão a pasta do Banco de Dados:
+- docker exec -it php_meupdv bash
+- chown www-data:www-data /var/www/html/data/meupdv.db
+
+5 - Comandos de Operação do Docker:
+- docker compose up -d (Iniciar o container de Caddy e o PHP Apache)
+- docker-compose down (Desativar os serviços)
+- docker ps (Verificar se o container está rodando)
+- docker stop (Parar os serviços completamente)
+
+## Acessar servidor
+http://meupdv.local
+http://meupdv.local:8080 
+http://IP_DO_SEU_SERVIDOR:80
+
+Vou mandar minha estrutura de pasta:
+Sistema/
+    data/
+        meupdv.db
+    public/
+        api/
+        js/
+        index.html
+    Caddyfile
+    docker-compose.yml
+    entrypoint.sh
+
+## Extra: Criar um link personalizado:
+sudo nano /etc/hosts
+127.0.0.1   meupdv.local
