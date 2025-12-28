@@ -27,7 +27,14 @@ Isso irá:
 - Criar os containers necessários (PHP, servidor web, banco SQLite).
 - Subir o sistema automaticamente na porta configurada (por padrão http://localhost:8070).
 
-### 3. Acessar o sistema
+### 3. Defina as permissões
+Com o terminal Linux aberto na raiz do projeto, digite:
+
+```bash
+chmod 777 data 
+```
+
+### 4. Acessar o sistema
 Abra o navegador e acesse:
 
 ```bash
