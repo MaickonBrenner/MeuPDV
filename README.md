@@ -2,8 +2,8 @@
 Repositório oficial do **Sistema MeuPDV**.
 
 ## 📌 Sobre o Sistema
-O **MeuPDV** é um sistema de gerenciamento de vendas desenvolvido para facilitar o controle de produtos, categorias e operações de um ponto de venda.  
-Ele foi projetado para ser simples, rápido e eficiente, atendendo pequenos e médios estabelecimentos.
+O **MeuPDV** é um sistema de gerenciamento de vendas desenvolvido para facilitar o controle de produtos, categorias e operações de um ponto de venda. Além disso, também conta com uma seção dedicada para controle de mesas e pedidos para lanchonetes e restaurantes. 
+Ele foi projetado para ser simples, rápido e eficiente, atendendo pequenos e médios estabelecimentos. 
 
 ---
 
