@@ -1,24 +1,22 @@
 services:
-  php:
+  app:
     image: php:8.2-apache
-    container_name: php_meupdv
+    container_name: meupdv-php
     volumes:
-      - ./entrypoint.sh:/usr/local/bin/entrypoint.sh
-      - ./public:/var/www/html
-      - ./data:/var/www/html/data
-
-    ports:
-      - "8070:80"
-    entrypoint: /usr/local/bin/entrypoint.sh
+      - ./app:/var/www/html
+      - ./data:/app_data
+    expose:
+      - "80"
     restart: unless-stopped
 
   caddy:
     image: caddy
-    container_name: caddy_meupdv
+    container_name: meupdv-caddy
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./public:/srv
+      - ./app:/var/www/html 
     ports:
-      - "80:80"
-      - "443:443"
+      - "8070:80"
+    depends_on:
+      - app
     restart: unless-stopped

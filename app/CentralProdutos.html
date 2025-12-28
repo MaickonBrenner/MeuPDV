@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icon.png">
+  <script src="js/CentralProdutos.js" defer></script>
+  <title>Central de Produtos | Route 85</title>
+</head>
+<body>
+  <header>
+    <img src="assets/icon.png" alt="Logo Route 85" class="logo">
+    <h1>Central de Produtos</h1>
+  </header>
+
+  <main>
+    <div class="form-box2">
+      <h2>Lista de Produtos</h2>
+      <table class="tabela responsive-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-produtos"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Modal de edição -->
+  <div id="modal-edicao" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h2>Editar Produto</h2>
+      <form id="form-produto" onsubmit="salvarProduto(event)">
+        <input type="hidden" id="id-produto">
+
+        <label for="nome-produto">Nome:</label>
+        <input type="text" id="nome-produto" required>
+        <br><br>
+
+        <label for="descricao-produto">Descrição:</label>
+        <input type="text" id="descricao-produto">
+        <br><br>
+
+        <label for="preco-produto">Preço:</label>
+        <input type="number" id="preco-produto" step="0.01" required>
+        <br><br>
+
+        <label for="categoria-produto">Categoria:</label>
+        <input type="text" id="categoria-produto" required>
+        <br><br>
+
+        <button type="submit" class="botao">Salvar Alterações</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>MeuPDV &copy; <script>document.write(new Date().getFullYear());</script> | Versão 1.0.0</p>
+  </footer>
+</body>
+</html>

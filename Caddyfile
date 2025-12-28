@@ -1,6 +1,5 @@
-meupdv.local
-
-root * /srv
-file_server
-
-php_fastcgi php:80
+:80 {
+  root * /var/www/html
+  reverse_proxy app:80
+  file_server
+}
